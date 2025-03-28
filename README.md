@@ -56,7 +56,7 @@ This repo, named **SkyReels-A2**, contains the official PyTorch implementation o
 
 ## Acknowledgements 💐
 
-We would like to thank the contributors of [Wan](https://github.com/Wan-Video/Wan2.1), [finetrainers](https://github.com/a-r-r-o-w/finetrainers) and [DiffPoseTalk](https://github.com/DiffPoseTalk/DiffPoseTalk)repositories, for their open research and contributions. 
+We would like to thank the contributors of [Wan](https://github.com/Wan-Video/Wan2.1) and [finetrainers](https://github.com/a-r-r-o-w/finetrainers) repositories, for their open research and contributions. 
 
 ## Citation 💖
 If you find SkyReels-A2 useful for your research, welcome to 🌟 this repo and cite our work using the following BibTeX:
