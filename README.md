@@ -42,16 +42,16 @@
 
 This repo, named **SkyReels-A2**, contains the official PyTorch implementation of our paper [SkyReels-A2: Compose Anything in Videos](https://arxiv.org).
 
-## Getting Started 🏁 
+## 1. Getting Started 🏁 
 
-### 1. Clone the code and prepare the environment 🛠️
+### 1.1 Clone the code and prepare the environment 🛠️
 
-### 2. Download pretrained weights 📥
+### 1.2 Download pretrained weights 📥
 
-### 3. Inference 🚀
+### 1.3 Inference 🚀
 
 
-## A2-Bench Evaluation 👓
+## 2. A2-Bench Evaluation 👓
 
 
 ## Acknowledgements 💐
