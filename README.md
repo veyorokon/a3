@@ -32,6 +32,7 @@
 <br>
 
 <p align="center">
+  <img src="./assets/demo.gif" alt="showcase" width="480">
   <br>
   🔥 For more results, visit our <a href="https://skyworkai.github.io/skyreels-a1.github.io/"><strong>homepage</strong></a> 🔥
 </p>
@@ -46,12 +47,56 @@ This repo, named **SkyReels-A2**, contains the official PyTorch implementation o
 
 ### 1.1 Clone the code and prepare the environment 🛠️
 
+First git clone the repository with code: 
+```bash
+git clone https://github.com/SkyworkAI/SkyReels-A2.git
+cd SkyReels-A2
+
+# create env using conda
+conda create -n skyreels-a2 python=3.10
+conda activate skyreels-a2
+```
+Then, install the remaining dependencies:
+```bash
+pip install -r requirements.txt
+```
+
 ### 1.2 Download pretrained weights 📥
+
+You can download the pretrained weights from HuggingFace as:
+```bash
+# !pip install -U "huggingface_hub[cli]"
+huggingface-cli download Skywork/SkyReels-A2 --local-dir local_path --exclude "*.git*" "README.md" "docs"
+```
+or download from webpage mannually. 
+
 
 ### 1.3 Inference 🚀
 
+You can first set the model path and reference images path and then simply run the inference scripts as: 
+```bash
+python inference.py
+```
+
+If the script runs successfully, you will get an output mp4 file. This file includes the following results: driving video, input image or video, and generated result.
+
+
+#### Gradio Interface 🤗
+
+We provide a [Gradio](https://huggingface.co/docs/hub/spaces-sdks-gradio) interface for a better experience, just run by:
+
+```bash
+python app.py
+```
+
+The graphical interactive interface is shown as below.  
+
+
 
 ## 2. A2-Bench Evaluation 👓
+
+Coming soon.
+
 
 
 ## Acknowledgements 💐
