@@ -81,6 +81,12 @@ python inference.py
 If the script runs successfully, you will get an output mp4 file. This file includes the following results: driving video, input image or video, and generated result.
 
 
+We also support multi-GPU inference scripts for faster inference, as:
+```bash
+python inference_MGPU.py
+```
+
+
 #### Gradio Interface 🤗
 
 We provide a [Gradio](https://huggingface.co/docs/hub/spaces-sdks-gradio) interface for a better experience, just run by:
