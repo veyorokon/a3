@@ -44,6 +44,22 @@
 
 This repo, named **SkyReels-A2**, contains the official PyTorch implementation of our paper [SkyReels-A2: Compose Anything in Videos](https://arxiv.org).
 
+## 🎉 News
+
+- [x] Apr 3, 2025: 🔥 Release pre-view version of checkpoints, code of model inference, preprocessing, and gradio demos.
+- [ ] Release all model sequence, including infinity-long version.
+- [ ] Support A2-Bench evaluation and leaderboard.
+
+## 🪄 Models
+| Models                   | Download Link                                                                                                                                                                           | Video Size         |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| A2-Wan2.1-14B-Preview | [Huggingface](https://huggingface.co/Skywork/SkyReels-A2) 🤗                                                                                                                                                              | ~ 81 x 480 x 832    | 
+| A2-Wan2.1-14B         | [To be released](https://github.com/SkyworkAI/SkyReels-A2)  | ~ 81 x 480 x 832    | 
+| A2-Wan2.1-14B-Infinity         | [To be released](https://github.com/SkyworkAI/SkyReels-A2)  | ~ Inf x 480 x 1080   | 
+
+
+
+
 ## 1. Getting Started 🏁 
 
 ### 1.1 Clone the code and prepare the environment 🛠️
