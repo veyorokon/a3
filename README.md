@@ -1,23 +1,24 @@
 <h1 align="center">SkyReels-A2: Compose Anything in Video Diffusion Transformers</h1> 
 
 <div align='center'>
-    <a href='https://scholar.google.com/citations?user=_43YnBcAAAAJ&hl=zh-CN' target='_blank'>Zhengcong Fei</a>&emsp;
-    <a href='' target='_blank'>Debang Li</a>&emsp;
-    <a href='https://scholar.google.com/citations?user=6D_nzucAAAAJ&hl=en' target='_blank'>Di Qiu</a>&emsp;
+    <a href='https://scholar.google.com/citations?user=_43YnBcAAAAJ&hl=zh-CN' target='_blank'>Zhengcong Fei<sup> * </sup></a>&emsp;
+    <a href='https://debangli.github.io/' target='_blank'>Debang Li<sup> * &dagger;</sup></a>&emsp;
+    <a href='https://scholar.google.com/citations?user=6D_nzucAAAAJ&hl=en' target='_blank'>Di Qiu<sup> * &dagger;</sup></a>&emsp;
     <a href='' target='_blank'>Jiahua Wang</a>&emsp;
     <a href='' target='_blank'>Yikun Dou</a>&emsp;
     <a href='' target='_blank'>Rui Wang</a>&emsp;
 </div>
 
 <div align='center'>
-    <a href='' target='_blank'>Jingtao Xu</a>&emsp;
+    <a href='https://scholar.google.com/citations?user=bL_o7I8AAAAJ&hl=en' target='_blank'>Jingtao Xu</a>&emsp;
     <a href='' target='_blank'>Mingyuan Fan</a>&emsp;
-    <a href='' target='_blank'>Guibin Chen</a>&emsp;
+    <a href='https://scholar.google.com.hk/citations?hl=zh-CN&user=HukWSw4AAAAJ' target='_blank'>Guibin Chen</a>&emsp;
     <a href='' target='_blank'>Yang Li</a>&emsp;
     <a href='' target='_blank'>Yahui Zhou</a>&emsp;
 </div>
 <div align='center'>
-    <small><strong>Skywork AI, Kunlun Inc.</strong></small>
+    <br><sup> * </sup>Equal contribution,<sup> &dagger; </sup>Project lead
+    <br><strong>Skywork AI, Kunlun Inc.</strong>
 </div>
 
 
