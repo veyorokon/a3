@@ -1,4 +1,4 @@
-<h1 align="center">SkyReels-A2: Compose Anything in Videos</h1> 
+<h1 align="center">SkyReels-A2: Compose Anything in Video Diffusion Transformers</h1> 
 
 <div align='center'>
     <a href='https://scholar.google.com/citations?user=_43YnBcAAAAJ&hl=zh-CN' target='_blank'>Zhengcong Fei</a>&emsp;
