@@ -34,7 +34,7 @@
 <p align="center">
   <img src="./assets/demo.gif" alt="showcase" width="800">
   <br>
-  🔥 For more results, visit our <a href="https://skyworkai.github.io/skyreels-a1.github.io/"><strong>homepage</strong></a> 🔥
+  🔥 For more results, visit our <a href="https://skyworkai.github.io/skyreels-a2.github.io/"><strong>homepage</strong></a> 🔥
 </p>
 
 <p align="center">
