@@ -28,7 +28,7 @@ HEIGHT = 480
 NUM_FRAMES = 81
 GUIDANCE_SCALE = 5.0
 VAE_SCALE_FACTOR_SPATIAL = 8
-STEP = 1
+STEP = 50
 
 class ModelInference:
     def __init__(self):
