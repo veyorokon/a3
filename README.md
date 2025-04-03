@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Skyreels Logo" width="50%">
+</p>
+
 <h1 align="center">SkyReels-A2: Compose Anything in Video Diffusion Transformers</h1> 
 
 <div align='center'>
