@@ -90,7 +90,7 @@ python infer_MGPU.py
 
 #### Gradio Interface 🤗
 
-We provide a [Gradio](https://huggingface.co/docs/hub/spaces-sdks-gradio) interface for a better experience, just run by:
+We also provide a [Gradio](https://huggingface.co/docs/hub/spaces-sdks-gradio) interface for a better user experience, just run by:
 
 ```bash
 python app.py
@@ -114,7 +114,7 @@ We would like to thank the contributors of [Wan](https://github.com/Wan-Video/Wa
 If you find SkyReels-A2 useful for your research, welcome to 🌟 this repo and cite our work using the following BibTeX:
 ```bibtex
 @article{fei2025skyreelsa2,
-  title={SkyReels-A2: Compose Anything in Videos},
+  title={SkyReels-A2: Compose Anything in Video Diffusion Transformers},
   author={skyreels team},
   journal={arXiv},
   year={2025}
