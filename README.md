@@ -76,7 +76,7 @@ or download from webpage mannually.
 
 You can first set the model path and reference images path and then simply run the inference scripts as: 
 ```bash
-python inference.py
+python infer.py
 ```
 
 If the script runs successfully, you will get an output mp4 file. This file includes the following results: driving video, input image or video, and generated result.
@@ -84,7 +84,7 @@ If the script runs successfully, you will get an output mp4 file. This file incl
 
 We also support multi-GPU inference scripts for faster inference, as:
 ```bash
-python inference_MGPU.py
+python infer_MGPU.py
 ```
 
 
