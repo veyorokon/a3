@@ -11,7 +11,7 @@ from diffusers.image_processor import VaeImageProcessor
 
 from models.transformer_a2 import A2Model 
 from models.pipeline_a2 import A2Pipeline 
-from models.utils import _crop_and_resize_pad, write_mp4
+from models.utils import _crop_and_resize_pad, _crop_and_resize, write_mp4
 
 
 prompt = "A man is holding a teddy bear in the forest." 
@@ -52,14 +52,18 @@ video_processor = VideoProcessor(vae_scale_factor=VAE_SCALE_FACTOR_SPATIAL)
 # prepare reference images
 clip_image_list = []
 vae_image_list = []
-for image_path in refer_images: 
+for image_id, image_path in enumerate(refer_images): 
     image = load_image(image=image_path).convert("RGB")
     # for clip 
     image_clip = _crop_and_resize_pad(image, height=512, width=512) 
     clip_image_list.append(image_clip)
     
     # for vae 
-    image_vae = _crop_and_resize_pad(image, height=height, width=width) 
+    if image_id == 0 or image_id == 1: 
+        image_vae = _crop_and_resize_pad(image, height=height, width=width) # ref image
+    else:
+        image_vae = _crop_and_resize(image, height=height, width=width) # background image
+    
     image_vae = video_processor.preprocess(image_vae, height=height, width=width).to(memory_format=torch.contiguous_format) # (1, 3, 480, 320)
     image_vae = image_vae.unsqueeze(2).to(device, dtype=torch.float32)
     vae_image_list.append(image_vae) #.to(device, dtype=dtype))
