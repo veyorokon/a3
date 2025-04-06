@@ -139,10 +139,10 @@ We would like to thank the contributors of [Wan](https://github.com/Wan-Video/Wa
 ## Citation 💖
 If you find SkyReels-A2 useful for your research, welcome to 🌟 this repo and cite our work using the following BibTeX:
 ```bibtex
-@article{fei2025skyreelsa2,
+@article{fei2025skyreels,
   title={SkyReels-A2: Compose Anything in Video Diffusion Transformers},
-  author={skyreels team},
-  journal={arXiv},
+  author={Fei, Zhengcong and Li, Debang and Qiu, Di and Wang, Jiahua and Dou, Yikun and Wang, Rui and Xu, Jingtao and Fan, Mingyuan and Chen, Guibin and Li, Yang and others},
+  journal={arXiv preprint arXiv:2504.02436},
   year={2025}
 }
 ```
