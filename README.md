@@ -53,14 +53,16 @@ This repo, named **SkyReels-A2**, contains the official PyTorch implementation o
 ## 🎉 News
 
 - [x] Apr 8, 2025: 🎉  We open the A2-Bench online evaluation and leaderboard. Test it on [A2-Bench Leaderboard](https://huggingface.co/spaces/Skywork/SkyReels_A2_Bench) !
+- [x] Apr 7, 2025: 🔥 [ComfyUI](https://github.com/Yuan-ManX/ComfyUI-SkyReels-A2) is now available.
 - [x] Apr 3, 2025: 🔥 We release pre-view version of checkpoints, code of model inference, preprocessing, and gradio demos.
 - [x] Previously, we released [SkyReels-A1](https://github.com/SkyworkAI/SkyReels-A1). This is an open-sourced and effective framework for portrait image animation.
 
 ## 📑 TODO List
 - [x] Support A2-Bench evaluation and leaderboard.
+- [x] ComfyUI
 - [ ] User-Level GPU Inference on RTX4090
 - [ ] Release all model sequence, including infinity-long version.
-- [ ] ComfyUI
+- [ ] Diffusers
 
 ## 🪄 Models
 | Models                   | Download Link                                                                                                                                                                           | Video Size         |
