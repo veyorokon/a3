@@ -132,7 +132,8 @@ The graphical interactive interface is shown as below.
 
 ## 2. A2-Bench Evaluation 👓
 
-We public the evaluation data in [Huggingface](https://huggingface.co/datasets/Skywork/A2-Bench), more detail about metric computation code and leaderboard will coming soon.
+We public the evaluation data in [Huggingface](https://huggingface.co/datasets/Skywork/A2-Bench), you can infer with results and then submit to [leaderboard](https://huggingface.co/spaces/Skywork/SkyReels_A2_Bench) to obtain the results automatically. 
+More detail about metric computation code will coming soon.
 
 
 
