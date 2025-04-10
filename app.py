@@ -32,7 +32,7 @@ STEP = 50
 
 class ModelInference:
     def __init__(self):
-        self._pipeline_path =  "/maindata/data/shared/public/multimodal/ckpt/wan14B-compose"
+        self._pipeline_path =  "/path/to/model"
         self._model_path = os.path.join(self._pipeline_path, "transformer")
         self._dtype = torch.bfloat16
         self._device = "cuda"
