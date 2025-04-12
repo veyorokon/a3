@@ -1,0 +1,42 @@
+# A3 Dataset configuration example
+# This is an example configuration for A3 model dataset which uses three types of conditioning:
+# 1. Object reference image - required
+# 2. Canny mask for object placement - optional
+# 3. Background image - optional
+
+# Resolutions to train on, given as the side length of a square image. You can have multiple sizes here.
+resolutions = [[1280, 720]]
+
+# Resolution for conditioning elements (object, mask, background)
+# Format matches resolutions: [[width, height]]
+conditioning_resolution = [[512, 512]]
+
+# For video training, you need to configure frame buckets (similar to aspect ratio buckets).
+# Videos will be assigned to the longest frame bucket possible, such that the video
+# is still greater than or equal to the frame bucket length.
+frame_buckets = [9, 25, 49, 65, 81]
+
+# Preprocessing configuration
+padding_pixels = 8                  # Padding in pixels around the square image
+background_color = [255, 255, 255]  # White background for padding (RGB values)
+
+# A3-specific configuration - default probability of dropping conditioning elements during training
+mask_drop_prob = 0.3
+bg_drop_prob = 0.3
+
+# Default suffixes for finding conditioning files
+object_suffix = "_object.png"
+mask_suffix = "_mask.png"
+bg_suffix = "_background.png"
+
+# Caching configuration
+cache_dir = "/dev/shm/a3_cache"     # Fast RAM disk for caching
+use_memory_mapping = true           # Use memory-mapped tensors for large files
+quantize_cached_tensors = false     # Optional tensor quantization
+cache_warmup_workers = 4            # Number of workers for cache pre-generation
+cache_batch_size = 1                # Batch size for latent precomputation (low values save memory)
+use_half_precision = true           # Use bfloat16 for VAE processing to save memory
+
+[[directory]]
+# Path to directory of media files (videos or images)
+path = "/dev/shm/dataset"

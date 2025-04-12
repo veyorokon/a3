@@ -1,0 +1,82 @@
+# A3 LoRA Training Configuration
+# This is a configuration file for training a LoRA adapter for the A3 model, 
+# which uses triple conditioning: object reference, canny mask, and background.
+
+# Directory Structure Expectations:
+# The ckpt_path should point to a directory containing these subdirectories:
+# - transformer/ (contains the model weights)
+# - tokenizer/
+# - text_encoder/
+# - vae/
+# - image_encoder/
+
+# Output path for training runs. Each training run makes a new directory in here.
+output_dir = '/workspace/training_runs/a3_lora'
+
+# A3 Dataset config file.
+dataset = 'examples/a3_dataset.toml'
+
+# training settings
+epochs = 10
+micro_batch_size_per_gpu = 4
+pipeline_stages = 1
+gradient_accumulation_steps = 1
+gradient_clipping = 1.0
+warmup_steps = 100
+
+# Block swapping for more memory-efficient training
+blocks_to_swap = 0
+
+# eval settings
+eval_every_n_epochs = 10
+eval_before_first_step = true
+eval_micro_batch_size_per_gpu = 1
+eval_gradient_accumulation_steps = 1
+
+# misc settings
+save_every_n_epochs = 1
+checkpoint_every_n_epochs = 50
+activation_checkpointing = true
+partition_method = 'parameters'
+save_dtype = 'bfloat16'
+caching_batch_size = 4
+steps_per_print = 1
+video_clip_mode = 'single_beginning'
+
+# A3 model configuration
+[model]
+type = 'a3'
+# Base model path - use original A2 model path
+ckpt_path = "/dev/shm/models"
+
+# Base dtype used for all models.
+dtype = 'bfloat16'
+transformer_dtype = 'float8'
+timestep_sample_method = 'logit_normal'
+model_type = "i2v"
+
+# LoRA adapter configuration
+[adapter]
+type = 'lora'
+rank = 32
+dtype = 'bfloat16'
+# Uncomment to initialize from a previous LoRA
+# init_from_existing = '/path/to/previous/lora'
+
+# These are the target modules for LoRA adaptation
+# Includes both standard A2 attention layers and specialized A3 conditioning layers
+target_modules = [
+    # Focus exclusively on the specialized conditioning layers unique to A2/A3
+    # These are the mechanisms that handle the additional conditioning inputs
+    # Only including Linear layers which are compatible with LoRA
+    # (RMSNorm layers like norm_added_k are not supported by LoRA)
+    "blocks.*.attn2.add_k_proj", 
+    "blocks.*.attn2.add_v_proj"
+]
+
+[optimizer]
+type = 'adamw_optimi'
+lr = 2e-5
+betas = [0.9, 0.99]
+weight_decay = 0.01
+eps = 1e-8

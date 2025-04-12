@@ -1,18 +1,17 @@
-import torch 
 import os
-from PIL import Image 
-import numpy as np 
-from diffusers import AutoencoderKLWan
-from transformers import CLIPVisionModel 
-from diffusers.video_processor import VideoProcessor
-from diffusers import UniPCMultistepScheduler 
-from diffusers.utils import export_to_video, load_image 
+
+import numpy as np
+import torch
+from diffusers import AutoencoderKLWan, UniPCMultistepScheduler
 from diffusers.image_processor import VaeImageProcessor
+from diffusers.utils import export_to_video, load_image
+from diffusers.video_processor import VideoProcessor
+from PIL import Image
+from transformers import CLIPVisionModel
 
-from models.transformer_a2 import A2Model 
-from models.pipeline_a2 import A2Pipeline 
-from models.utils import _crop_and_resize_pad, _crop_and_resize, write_mp4
-
+from inference.pipeline_a2_inference import A2Pipeline
+from inference.transformer_a2 import A2Model
+from inference.utils import _crop_and_resize, _crop_and_resize_pad, write_mp4
 
 prompt = "A man is holding a teddy bear in the forest." 
 negative_prompt = "Bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards"
